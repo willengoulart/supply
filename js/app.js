@@ -5,7 +5,7 @@ var supply = (function() {
   //  UTILITIES
   // ============
 
-  var Util = {};
+  var util = {};
 
   /**
    *  Formata um número para reais.
@@ -14,7 +14,7 @@ var supply = (function() {
    *
    *  @returns {String} - String formatada.
    */
-  Util.numberToCurrency = function(number) {
+  util.numberToCurrency = function(number) {
     return 'R$' + number.toFixed(2).toString().replace('.', ',');
   };
 
@@ -25,7 +25,7 @@ var supply = (function() {
    *
    *  @param {Event} e - O evento a ser impedido.
    */
-  Util.preventEvent = function(e) {
+  util.preventEvent = function(e) {
     e.preventDefault();
     e.stopPropagation();
   };
@@ -34,6 +34,7 @@ var supply = (function() {
   //  PRODUCT CAROUSEL
   // ===================
 
+  //  QUESTION: Transformar em uma classe? (Jacó acha que sim)
   var ProductCarousel = {};
 
 
@@ -72,20 +73,20 @@ var supply = (function() {
         },
         price: function(price) {
           if (product.sale_price) {
-            template.querySelector('[data-fill=old_price]').textContent  = Util.numberToCurrency( price );
-            template.querySelector('[data-fill=discount]').textContent  = Util.numberToCurrency( price - product.sale_price );
-            this.innerHTML = Util.numberToCurrency( product.sale_price );
+            template.querySelector('[data-fill=old_price]').textContent  = util.numberToCurrency( price );
+            template.querySelector('[data-fill=discount]').textContent  = util.numberToCurrency( price - product.sale_price );
+            this.innerHTML = util.numberToCurrency( product.sale_price );
 
           } else {
             template.querySelector('.old-price').style.display = 'none';
             template.querySelector('.discount').style.visibility = 'hidden';
-            this.innerHTML = Util.numberToCurrency( price );
+            this.innerHTML = util.numberToCurrency( price );
           }
 
           return false;
         },
         qtd_parcelas: function(qtd) {
-          template.querySelector('[data-fill=valor_parcela]').textContent  = Util.numberToCurrency( (product.sale_price || product.price) / qtd );
+          template.querySelector('[data-fill=valor_parcela]').textContent  = util.numberToCurrency( (product.sale_price || product.price) / qtd );
         }
       };
 
@@ -96,15 +97,15 @@ var supply = (function() {
         var key = el.getAttribute('data-fill');
 
         if (
-          // Checa se um caso especial foi definido e chama sua função.
+          // Checa se uma função especial foi definida;
           typeof specialCases[key] == 'function' &&
-          // Se a função for invocada e retornar `false`, parte para a próxima iteração.
+          // Se a função retornar `false`, parte para a próxima iteração;
           specialCases[key].call( el, product[key] ) === false
 
         ) return;
 
         // Se as outras condições não forem atendidas e existirem dados no objeto,
-        //  faz alterações no HTML.
+        //  faz as devidas alterações ao HTML.
         if (typeof product[key] !== 'undefined') el.innerHTML = product[key];
       }
     );
@@ -162,7 +163,7 @@ var supply = (function() {
 
   // Retorna os objetos para serem adicionados à variável principal
   return {
-    util: Util,
+    util: util,
     ProductCarousel: ProductCarousel
   };
 }());
