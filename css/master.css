@@ -1,0 +1,184 @@
+
+/*  Header
+  =========== */
+
+.mini-header a {
+  color: inherit;
+}
+
+
+
+
+/*  Main content
+  ================ */
+
+/* Banner section */
+.banner-section {
+  background-color: #5fc5ed;
+}
+
+.banner-section .carousel-indicators li {
+  width: .75rem;
+  height: .75rem;
+  border-radius: 50%;
+}
+
+.carousel-control-next:hover,
+.carousel-control-prev:hover {
+  background-color: rgba(0, 0, 0, .1);
+}
+
+/* Products section */
+.products-section {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.products-section .owl-carousel {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.owl-theme .owl-nav [class*=owl-] {
+  position: absolute;
+  top: 50%;
+
+  background-color: transparent;
+  color: #5fc5ed;
+  font-size: 1.5rem;
+
+  transform: translateY(-50%);
+}
+
+.owl-theme .owl-nav [class*=owl-]:hover {
+  background-color: #f8f9fa;
+  color: #5fc5ed;
+}
+
+.owl-theme .owl-nav .owl-prev {
+  left: -1.25rem;
+}
+
+.owl-theme .owl-nav .owl-next {
+  right: -1.25rem;
+}
+
+.product {
+  position: relative;
+  padding: .5rem;
+
+  text-align: center;
+}
+
+.owl-item.active + .owl-item.active .product::before {
+  position: absolute;
+  top: 10%;
+  left: 0;
+
+  background-color: #e1e1e1;
+  height: 80%;
+  width: 1px;
+
+  content: '';
+  display: block;
+}
+
+.product:hover {
+  background-color: #5fc5ed;
+}
+
+.product-img {
+  width: 100%;
+  max-width: 170px;
+  margin: 0 auto .75rem;
+
+  cursor: zoom-in;
+  display: block;
+}
+
+.product-name {
+  height: 2.5em;
+
+  font-size: 1.125rem;
+  font-weight: bold;
+}
+
+.product .stars img {
+  max-width: 100px;
+  margin: auto;
+}
+
+.product-desc {
+  height: 5em;
+  margin-bottom: .5rem;
+
+  font-size: .875rem;
+}
+
+.product-desc .old-price {
+  font-size: .875em;
+}
+
+.product .buy-btn {
+  border-radius: 0;
+}
+
+.product .discount {
+  background-color: #fff;
+  width: 80%;
+  margin: 1rem auto;
+  padding: .25rem;
+
+  font-size: .75rem;
+
+  border: 1px solid #c5c5c5;
+}
+
+/* Product zoom */
+#zoom-modal .modal-content {
+  border-radius: 0;
+}
+
+#zoom-modal .modal-content .close {
+  width: 1em;
+  height: 1em;
+
+  font-size: 1.75rem;
+  line-height: 1;
+}
+
+#zoom-modal .zoom-img {
+  max-width: 100%;
+  margin-top: .75rem;
+}
+
+
+/* ==========
+     FOOTER
+   ========== */
+
+/*  Mega Footer
+  =============== */
+
+.mega-footer ul {
+  list-style: none;
+  padding-left: .75rem;
+}
+
+.mega-footer ul a {
+  color: inherit;
+}
+
+
+/*  Mini Footer
+  =============== */
+
+/*.mini-footer {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}*/
+
+/* Copyright */
+.copyright {
+  margin: 0;
+}
