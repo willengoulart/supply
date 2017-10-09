@@ -1,0 +1,31 @@
+
+/* =================
+    Product Details
+   ================= */
+
+.full-product {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.full-product .product-img {
+  width: 100%;
+  max-width: 500px;
+
+  margin: auto;
+}
+
+.full-product .product-name {
+  font-size: 1.25rem;
+}
+
+.full-product .product-price {
+  font-size: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .full-product .product-name,
+  .full-product .product-price {
+    font-size: 1.75rem;
+  }
+}

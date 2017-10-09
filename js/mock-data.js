@@ -9,6 +9,7 @@ const productList = [
   {
     id: 1,
     name: 'Lorem Ipsum (Veja)',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
     price: 99.99,
     sale_price: false,
     qtd_parcelas: 4, // Esqueci a tradução disso ( ._.)
@@ -18,6 +19,7 @@ const productList = [
   {
     id: 2,
     name: 'Lorem Ipsum (Neve)',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
     price: 99.90,
     sale_price: 79.92,
     qtd_parcelas: 3,
@@ -27,6 +29,7 @@ const productList = [
   {
     id: 3,
     name: 'Lorem Ipsum (Ipê)',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
     price: 229.90,
     sale_price: 183.92,
     qtd_parcelas: 9,
@@ -36,6 +39,7 @@ const productList = [
   {
     id: 4,
     name: 'Lorem Ipsum (Pinho Sol)',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
     price: 219.90,
     sale_price: 159.92,
     qtd_parcelas: 7,
@@ -45,6 +49,7 @@ const productList = [
   {
     id: 5,
     name: 'Lorem Ipsum (Lorem Ipsum)',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
     price: 95.92,
     sale_price: false,
     qtd_parcelas: 4,
@@ -54,6 +59,7 @@ const productList = [
   {
     id: 6,
     name: 'Lorem Ipsum (Void)',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
     price: 99.90,
     sale_price: 79.92,
     qtd_parcelas: 3,
@@ -63,6 +69,7 @@ const productList = [
   {
     id: 7,
     name: 'Lorem Ipsum (Bom Bril)',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
     price: 229.90,
     sale_price: 183.92,
     qtd_parcelas: 9,
@@ -72,6 +79,7 @@ const productList = [
   {
     id: 8,
     name: 'Lorem Ipsum (SBT)',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
     price: 219.90,
     sale_price: 159.92,
     qtd_parcelas: 7,
@@ -79,6 +87,32 @@ const productList = [
     zoom_img_url: 'http://via.placeholder.com/900?text=Produto%20com%20zoom'
   }
 ];
+
+// Lista as categorias de produtos
+const categoriesList = [
+  {
+    id: 1,
+    name: 'Limpa coisas'
+  },
+  {
+    id: 2,
+    name: 'Limpa mais coisas'
+  },
+  {
+    id: 3,
+    name: 'Produtos de limpeza'
+  },
+  {
+    id: 4,
+    name: 'Produtos de higiene'
+  }
+];
+
+// Atribui categorias aleatórias para os produtos
+productList.forEach(function(prod) {
+  prod.category = categoriesList[ Math.floor( Math.random() * categoriesList.length ) ];
+});
+
 
 // Lista de estados do Brasil
 const statesList = [
