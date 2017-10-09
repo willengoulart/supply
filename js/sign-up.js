@@ -1,38 +1,32 @@
-(function() {
-  'use strict';
+$(function() {
 
-  /**
-   *  Preenche um elemento com os dados fornecidos.
-   *
-   *  @param {HTMLElement}  elem - Elemento em questão.
-   *  @param {Object}       data - Dados para o preenchimento.
-   *
-   *  TODO: Integrar com o algoritmo presente em app.js e mover para um lugar adequado.
-   */
-  supply.util.fillData = function(elem, data) {
-
-    // NOTE: Caso genérico está em app.js
-    // Preenche o `select` com os estados do Brasil
-    elem.innerHTML = data.reduce(function(html, state) {
-      return html + '<option value="'+ state.id +'">'+ state.name +'</option>';
-    }, '');
+  // Cria as máscaras para telefones de São Paulo
+  var SPMaskBehavior = function (val) {
+    return val.replace(/\D/g, '').length === 11 ? '(00) 00000-0000' : '(00) 0000-00009';
+  },
+  spOptions = {
+    onKeyPress: function(val, e, field, options) {
+      field.mask(SPMaskBehavior.apply({}, arguments), options);
+    }
   };
 
-}());
+  $('[data-maskpattern=sp-phone]').mask(SPMaskBehavior, spOptions);
 
-$(function() {
-  supply.util.fillData( document.querySelector('[data-fill=states]'), statesList );
+  // Preenche o `select` com os estados do Brasil
+  document.querySelector('[data-fill=states]').innerHTML = statesList.reduce(function(html, state) {
+    return html + '<option value="'+ state.id +'">'+ state.name +'</option>';
+  }, '');
 
-  // Exemplo de chamada após a integração:
-  // supply.util.fillData( document.querySelector('[data-fill=states]'), statesList, {
-  //   states: function(states) {
-  //     this.innerHTML = states.reduce(function(html, state) {
-  //       return html + '<option value="'+ state.id +'">'+ state.name +'</option>';
-  //     }, '');
-  //
-  //     return false;
-  //   }
-  // });
+  // Valida o formulário
+  document.getElementById('sign-up-form')
+    .addEventListener('submit', function(e) {
+      e.preventDefault();
+      e.stopPropagation();
 
-  // TODO: Fazer a validação de formulário
+      this.classList.add('was-validated');
+
+      if ( !this.checkValidity() ) return;
+
+      // location.href = './urldesucesso.html';
+    });
 });
