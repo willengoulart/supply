@@ -64,23 +64,24 @@ var supply = (function() {
 
       // Define os casos especiais para a função de preenchimento
       specialCases = {
+        // NOTE: Altera o link enquanto a função não dá suporte para chaves multiplas
+        name: function() {
+          this.href = './product.html?productId=' + product.id;
+        },
         img_url: function(url) {
           this.src = url;
-          return false;
-        },
-        stars: function(stars) {
           return false;
         },
         price: function(price) {
           if (product.sale_price) {
             template.querySelector('[data-fill=old_price]').textContent  = util.numberToCurrency( price );
             template.querySelector('[data-fill=discount]').textContent  = util.numberToCurrency( price - product.sale_price );
-            this.innerHTML = util.numberToCurrency( product.sale_price );
+            this.textContent = util.numberToCurrency( product.sale_price );
 
           } else {
             template.querySelector('.old-price').style.display = 'none';
             template.querySelector('.discount').style.visibility = 'hidden';
-            this.innerHTML = util.numberToCurrency( price );
+            this.textContent = util.numberToCurrency( price );
           }
 
           return false;
@@ -177,4 +178,9 @@ $(function() {
       form.addEventListener('submit', supply.util.preventEvent);
     }
   );
+
+  // Popula os links de categorias do footer
+  document.querySelector('[data-fill=categories]').innerHTML = categoriesList.reduce(function(html, cat) {
+    return html + '<li><a href="./produtos.html?category='+ cat.id +'">'+ cat.name +'</a></li>';
+  }, '');
 });
