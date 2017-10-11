@@ -27,6 +27,6 @@ $(function() {
 
       if ( !this.checkValidity() ) return;
 
-      // location.href = './urldesucesso.html';
+      location.href = './sign-in-success.html';
     });
 });
