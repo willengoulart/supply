@@ -72,38 +72,60 @@
         </div>
       </header>
 
-      <main class="container py-3">
-        <h2>Login</h2>
+      <main class="container py-5">
+        <style media="screen">
+          #login-form {
+            width: 25rem;
+            max-width: 100%;
+            margin: auto;
+          }
 
-        <form action="#" method="post" data-prevent-submit>
-          <fieldset>
+          @media (min-width: 992px) {
+            main {
+              min-height: 50vh;
+            }
+          }
+        </style>
 
-            <div class="row justify-content-center">
-              <div class="form-group col-xs-12 col-md-4">
-                <label for="input-email">Email</label>
-                <input type="email" name="email" id="input-email" class="form-control">
-              </div>
-            </div>
+        <form action="#" method="post" id="login-form" novalidate>
+          <h2 class="h3 mb-3">Login</h2>
 
-			<div class="row justify-content-center">
-              <div class="form-group col-xs-12 col-md-4">
-                <label for="input-senha">Senha</label>
-                <input type="password" name="senha" id="input-senha" class="form-control">
-				<a href="password-reset.html" class="link">Esqueceu a senha?</a>
-              </div>
-            </div>
+          <div class="form-group">
+            <label for="input-email">Email</label>
+            <input type="email" name="email" id="input-email" class="form-control" required>
+          </div>
 
-			<div class="row justify-content-center">
-			  <div class="col-xs-12 col-md-4">
-				<button type="submit" class="btn btn-primary">Entrar</button>
-				<a href="sign-up.html" class="link">Não tem uma conta? Cadastre-se</a>
-			  </div>
-			</div>
+          <div class="form-group">
+            <label for="input-senha">Senha</label>
+            <input type="password" name="senha" id="input-senha" class="form-control" required>
 
-          </fieldset>
+            <a href="password-reset.html" class="link d-inline-block mt-2">Esqueceu a senha?</a>
+          </div>
 
+          <div class="text-center text-sm-left">
+            <button type="submit" class="btn btn-primary px-4">Entrar</button>
+            <br class="d-sm-none">
+            <a href="sign-up.html" class="btn btn-link">Não tem uma conta? Cadastre-se</a>
+          </div>
         </form>
 
+        <script type="text/javascript">
+          document.getElementById('login-form')
+            .addEventListener('submit', function(e) {
+              e.preventDefault();
+              e.stopPropagation();
+
+              this.classList.add('was-validated');
+
+              if ( !this.checkValidity() ) return;
+
+              // Simula o atraso do servidor
+              //  TODO: Adicionar um progressbar
+              setTimeout(function() {
+                location.href = './index.html';
+              }, 500);
+            });
+        </script>
       </main>
 
       <footer>
@@ -122,7 +144,7 @@
 
               <nav class="col-12 col-md-6 col-lg-4">
                 <h3>Categorias</h3>
-                <ul>
+                <ul data-fill="categories">
                   <li><a href="#">lorem ipsum</a></li>
                   <li><a href="#">lorem ipsum</a></li>
                   <li><a href="#">lorem ipsum</a></li>
@@ -165,7 +187,5 @@
 
     <script src="./js/mock-data.js"></script>
     <script src="./js/app.js"></script>
-
-    <script src="./js/sign-up.js" charset="utf-8"></script>
   </body>
 </html>
