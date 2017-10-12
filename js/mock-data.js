@@ -12,7 +12,7 @@ const productList = [
     description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
     price: 99.99,
     sale_price: false,
-    qtd_parcelas: 4, // Esqueci a tradução disso ( ._.)
+    installments: 4,
     img_url: 'http://via.placeholder.com/170x150?text=Produto',
     zoom_img_url: 'http://via.placeholder.com/900?text=Produto%20com%20zoom'
   },
@@ -22,7 +22,7 @@ const productList = [
     description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
     price: 99.90,
     sale_price: 79.92,
-    qtd_parcelas: 3,
+    installments: 3,
     img_url: 'http://via.placeholder.com/170x150?text=Produto',
     zoom_img_url: 'http://via.placeholder.com/900?text=Produto%20com%20zoom'
   },
@@ -32,7 +32,7 @@ const productList = [
     description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
     price: 229.90,
     sale_price: 183.92,
-    qtd_parcelas: 9,
+    installments: 9,
     img_url: 'http://via.placeholder.com/170x150?text=Produto',
     zoom_img_url: 'http://via.placeholder.com/900?text=Produto%20com%20zoom'
   },
@@ -42,7 +42,7 @@ const productList = [
     description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
     price: 219.90,
     sale_price: 159.92,
-    qtd_parcelas: 7,
+    installments: 7,
     img_url: 'http://via.placeholder.com/170x150?text=Produto',
     zoom_img_url: 'http://via.placeholder.com/900?text=Produto%20com%20zoom'
   },
@@ -52,7 +52,7 @@ const productList = [
     description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
     price: 95.92,
     sale_price: false,
-    qtd_parcelas: 4,
+    installments: 4,
     img_url: 'http://via.placeholder.com/170x150?text=Produto',
     zoom_img_url: 'http://via.placeholder.com/900?text=Produto%20com%20zoom'
   },
@@ -62,7 +62,7 @@ const productList = [
     description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
     price: 99.90,
     sale_price: 79.92,
-    qtd_parcelas: 3,
+    installments: 3,
     img_url: 'http://via.placeholder.com/170x150?text=Produto',
     zoom_img_url: 'http://via.placeholder.com/900?text=Produto%20com%20zoom'
   },
@@ -72,7 +72,7 @@ const productList = [
     description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
     price: 229.90,
     sale_price: 183.92,
-    qtd_parcelas: 9,
+    installments: 9,
     img_url: 'http://via.placeholder.com/170x150?text=Produto',
     zoom_img_url: 'http://via.placeholder.com/900?text=Produto%20com%20zoom'
   },
@@ -82,7 +82,7 @@ const productList = [
     description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
     price: 219.90,
     sale_price: 159.92,
-    qtd_parcelas: 7,
+    installments: 7,
     img_url: 'http://via.placeholder.com/170x150?text=Produto',
     zoom_img_url: 'http://via.placeholder.com/900?text=Produto%20com%20zoom'
   }

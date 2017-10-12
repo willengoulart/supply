@@ -86,7 +86,7 @@ var supply = (function() {
 
           return false;
         },
-        qtd_parcelas: function(qtd) {
+        installments: function(qtd) {
           template.querySelector('[data-fill=valor_parcela]').textContent  = util.numberToCurrency( (product.sale_price || product.price) / qtd );
         }
       };
