@@ -75,142 +75,89 @@
           </div>
         </div>
       </header>
-      
-      <div id="templates-wrapper">
-        <div id="zoom-modal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
-          <div class="modal-dialog" role="document">
-            <div class="modal-content">
-              <div class="modal-body">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                  <span class="fa fa-close" aria-hidden="true"></span>
-                </button>
 
-                <img src="#" alt="" class="zoom-img">
+      <main class="container py-4">
+        <h2 class="h3 mb-4">Carrinho de Compras <span class="fa fa-shopping-cart mr-1" aria-hidden="true"></span></h2>
+
+        <table class="table table-responsive table-striped table-hover">
+          <thead>
+            <tr>
+              <th>
+                Produto
+              </th>
+              <th>Quantidade</th>
+              <th>Preço unitário</th>
+              <th>Preço total</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <img src="http://via.placeholder.com/50x50?text=Produto">
+                Lorem Ipsum (Neve)
+              </td>
+              <td><input type="number" value="1" class="form-control"></td>
+              <td>R$79,92</td>
+              <td>R$79,92</td>
+              <td><a href="#" title="Remover do carrinho"><span class="fa fa-trash mr-1" aria-hidden="true"></span></a></td>
+            </tr>
+            <tr>
+              <td>
+                <img src="http://via.placeholder.com/50x50?text=Produto">
+                Lorem Ipsum (Veja)
+              </td>
+              <td><input type="number" value="2" class="form-control"></td>
+              <td>R$99,99</td>
+              <td>R$199,98</td>
+              <td><a href="#" title="Remover do carrinho"><span class="fa fa-trash mr-1" aria-hidden="true"></span></a></td>
+            </tr>
+            <tr>
+              <td>
+                <img src="http://via.placeholder.com/50x50?text=Produto">
+                Lorem Ipsum (Ipẽ)
+              </td>
+              <td><input type="number" value="1" class="form-control"></td>
+              <td>R$183,92</td>
+              <td>R$183,92</td>
+              <td><a href="#" title="Remover do carrinho"><span class="fa fa-trash mr-1" aria-hidden="true"></span></a></td>
+            </tr>
+          </tbody>
+          <tfoot class="table-inverse">
+            <tr>
+              <td colspan="2">
+              </td>
+              <td>
+                Total a comprar
+              </td>
+              <td>
+                R$463,82
+              </td>
+              <td></td>
+            </tr>
+          </tfoot>
+        </table>
+
+        <div class="row">
+        	<div class="col-12 col-md-5 col-lg-4 col-xl-3">
+            <div class="card p-3">
+              <h3 class="h4">Cálculo do frete</h3>
+
+              <div class="form-group">
+                <input type="text" name="zip" id="input-zip" class="form-control" placeholder="_____-___" pattern="\d{5}-\d{3}" data-mask="00000-000">
+              </div>
+
+              <p>Valor do Frete: <strong>R$ 15,00</strong></p>
+
+              <p class="h5">Valor total da compra: R$478,82</p>
+
+              <div class="toolbar">
+                <button class="btn btn-success">Ir para o pagamento</button>
               </div>
             </div>
-          </div>
-        </div>
+    			</div>
+    		</div>
 
-        <div data-template="product" hidden>
-          <article class="item product">
-            <img src="#" alt="" class="product-img" data-fill="img_url">
-
-            <h3 class="product-name"><a href="#" data-fill="name">Name</a></h3>
-
-            <p class="product-desc">
-              <del class="old-price text-muted font-italic">De: <span data-fill="old_price"></span><br></del>
-              <strong class="price">
-                Por: <span class="font-italic" data-fill="price"></span>
-              </strong><br>
-              <span class="font-italic">
-                ou <span class="font-weight-bold">até <span data-fill="qtd_parcelas"></span>X</span>
-                de <span class="font-weight-bold" data-fill="valor_parcela"></span>
-              </span>
-            </p>
-
-            <button class="btn btn-dark buy-btn">
-              <span class="fa fa-shopping-cart mr-1" aria-hidden="true"></span>
-              Comprar
-            </button>
-
-            <p class="discount">Economize: <span data-fill="discount"></span></p>
-          </article>
-        </div>
-      </div>
-
-      <main class="container">
-        <h2>Carrinho de Compras <span class="fa fa-shopping-cart mr-1" aria-hidden="true"></span></h2>
-        
-        <table class="table table-striped table-hover">
-        	<thead>
-        		<tr>
-        			<th>
-        				Produto
-        			</th>
-        			<th>Quantidade</th>
-        			<th>Preço unitário</th>
-        			<th>Preço total</th>
-        			<th></th>
-        		</tr>
-        	</thead>
-        	<tbody>
-				<tr>
-					<td>
-						<img src="http://via.placeholder.com/50x50?text=Produto">
-						Lorem Ipsum (Neve)
-					</td>
-					<td><input type="number" value="1" class="form-control"></td>
-					<td>R$79,92</td>
-					<td>R$79,92</td>
-					<td><a href="#" title="Remover do carrinho"><span class="fa fa-trash mr-1" aria-hidden="true"></span></a></td>
-				</tr>
-				<tr>
-					<td>
-						<img src="http://via.placeholder.com/50x50?text=Produto">
-						Lorem Ipsum (Veja)
-					</td>
-					<td><input type="number" value="2" class="form-control"></td>
-					<td>R$99,99</td>
-					<td>R$199,98</td>
-					<td><a href="#" title="Remover do carrinho"><span class="fa fa-trash mr-1" aria-hidden="true"></span></a></td>
-				</tr>
-				<tr>
-					<td>
-						<img src="http://via.placeholder.com/50x50?text=Produto">
-						Lorem Ipsum (Ipẽ)
-					</td>
-					<td><input type="number" value="1" class="form-control"></td>
-					<td>R$183,92</td>
-					<td>R$183,92</td>
-					<td><a href="#" title="Remover do carrinho"><span class="fa fa-trash mr-1" aria-hidden="true"></span></a></td>
-				</tr>
-        	</tbody>
-        	<tfoot class="table-inverse">
-        		<tr>
-        			<td colspan="2">
-        			<td>
-       					Total a comprar
-        			</td>
-        			<td>
-        				R$463,82
-        			</td>
-        			<td></td>
-        		</tr>
-        	</tfoot>
-        </table>
-        <div class="row">
-        	<div class="col col-8">
-        		<!--
-        		<h4>Que tal esses produtos?</h4>
-        		 
-        		<section class="products-section">
-		          <div class="container">
-		            <div id="products-carousel" class="owl-carousel owl-theme"></div>
-		          </div>
-		        </section>
-        		 -->
-        		
-        	</div>
-			<div class="col col-4">
-				
-				<h3>Cálculo do frete</h3>
-				
-				<div class="form-group">
-				<input type="text" class="form-control" placeholder="CEP para entrega">
-				</div>
-				<p>
-					Valor do Frete: <strong>R$ 15,00</strong>
-				</p>
-				<h4>
-					Valor total da compra: R$478,82
-				</h4>
-				
-				<div class="btn toolbar">
-					<button class="btn btn-success">Ir para o pagamento</button>
-				</div>
-			</div>
-		</div>
-        
       </main>
 
       <footer>
@@ -270,11 +217,8 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"
     integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
 
-	<script src="./vendor/owl-carousel/owl.carousel.min.js"></script>
     <script src="./js/mock-data.js"></script>
     <script src="./js/app.js"></script>
-
-    <script src="./js/home.js"></script>
 
   </body>
 </html>
