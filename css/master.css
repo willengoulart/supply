@@ -8,6 +8,17 @@
 }
 
 
+/* ================
+      MAIN CONTENT
+   ================ */
+
+@media (min-width: 992px) {
+  main {
+    min-height: 50vh;
+  }
+}
+
+
 /* ==========
      FOOTER
    ========== */
