@@ -33,7 +33,7 @@ $cakeDescription = 'CakePHP: the rapid development PHP framework';
 <html>
 <head>
     <?= $this->Html->charset() ?>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Detalhesport" content="width=device-width, initial-scale=1.0">
     <title>
         <?= $cakeDescription ?>
     </title>
@@ -119,7 +119,7 @@ $cakeDescription = 'CakePHP: the rapid development PHP framework';
 
         <?php $settings = Cache::getConfig('_cake_core_'); ?>
         <?php if (!empty($settings)) : ?>
-            <li class="bullet success">The <em><?= $settings['className'] ?>Engine</em> is being used for core caching. To change the config edit config/app.php</li>
+            <li class="bullet success">The <em><?= $settings['className'] ?>Engine</em> is being used for core caching. To change the config Editar config/app.php</li>
         <?php else : ?>
             <li class="bullet problem">Your cache is NOT working. Please check the settings in config/app.php</li>
         <?php endif; ?>
@@ -169,10 +169,10 @@ $cakeDescription = 'CakePHP: the rapid development PHP framework';
 
 <div class="row">
     <div class="columns large-6">
-        <h3>Editing this Page</h3>
+        <h3>Editaring this Page</h3>
         <ul>
-            <li class="bullet cutlery">To change the content of this page, edit: src/Template/Pages/home.ctp.</li>
-            <li class="bullet cutlery">You can also add some CSS styles for your pages at: webroot/css/.</li>
+            <li class="bullet cutlery">To change the content of this page, Editar: src/Template/Pages/home.ctp.</li>
+            <li class="bullet cutlery">You can also Novo some CSS styles for your pages at: webroot/css/.</li>
         </ul>
     </div>
     <div class="columns large-6">
@@ -216,7 +216,7 @@ $cakeDescription = 'CakePHP: the rapid development PHP framework';
             </li>
             <li class="bullet cutlery">
                 <a href="https://groups.google.com/group/cake-php">CakePHP Google Group</a>
-                <ul><li>Community mailing list</li></ul>
+                <ul><li>Community mailing Listar</li></ul>
             </li>
         </ul>
     </div>
@@ -238,15 +238,15 @@ $cakeDescription = 'CakePHP: the rapid development PHP framework';
             </li>
             <li class="bullet cutlery">
                 <a href="https://plugins.cakephp.org">CakePHP plugins repo</a>
-                <ul><li>A comprehensive list of all CakePHP plugins created by the community</li></ul>
+                <ul><li>A comprehensive Listar of all CakePHP plugins created by the community</li></ul>
             </li>
             <li class="bullet cutlery">
                 <a href="https://github.com/cakephp/">CakePHP Code</a>
                 <ul><li>For the Development of CakePHP Git repository, Downloads</li></ul>
             </li>
             <li class="bullet cutlery">
-                <a href="https://github.com/FriendsOfCake/awesome-cakephp">CakePHP Awesome List</a>
-                <ul><li>A curated list of amazingly awesome CakePHP plugins, resources and shiny things.</li></ul>
+                <a href="https://github.com/FriendsOfCake/awesome-cakephp">CakePHP Awesome Listar</a>
+                <ul><li>A curated Listar of amazingly awesome CakePHP plugins, resources and shiny things.</li></ul>
             </li>
             <li class="bullet cutlery">
                 <a href="https://www.cakephp.org">CakePHP</a>

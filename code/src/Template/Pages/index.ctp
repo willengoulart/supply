@@ -29,19 +29,19 @@
 
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <img src="/img/banner/banner2.jpg" alt="Criamos experiências de compras fantásticas" class="d-block w-100">
+                    	<?= $this->Html->image('banner/banner2.jpg', ['alt'=>'Criamos experiências de compras fantásticas', 'class'=>'d-block w-100'])?>
                     </div>
 
                     <div class="carousel-item">
-                        <img src="/img/banner/banner3.jpg" alt="Slide 3" class="d-block w-100">
+                        <?= $this->Html->image('banner/banner3.jpg', ['alt'=>'Slide 3', 'class'=>'d-block w-100'])?>
                     </div>
 
                     <div class="carousel-item">
-                        <img src="/img/banner/banner4.jpg" alt="Slide 4" class="d-block w-100">
+                        <?= $this->Html->image('banner/banner4.jpg', ['alt'=>'Slide 4', 'class'=>'d-block w-100'])?>
                     </div>
 
                     <div class="carousel-item">
-                        <img src="/img/banner/banner5.jpg" alt="Slide 5" class="d-block w-100">
+                        <?= $this->Html->image('banner/banner5.jpg', ['alt'=>'Slide 5', 'class'=>'d-block w-100'])?>
                     </div>
                 </div>
 
@@ -50,8 +50,8 @@
                     <span class="sr-only">Slide anterior</span>
                 </a>
 
-                <a class="carousel-control-next" href="#banner-carousel" role="button" data-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <a class="carousel-control-Próximo" href="#banner-carousel" role="button" data-slide="Próximo">
+                    <span class="carousel-control-Próximo-icon" aria-hidden="true"></span>
                     <span class="sr-only">Próximo slide</span>
                 </a>
             </div>

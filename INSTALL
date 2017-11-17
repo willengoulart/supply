@@ -1,0 +1,21 @@
+ESSE É UM PROJETO EM CAKEPHP 3.X
+
+COMO INSTALAR:
+1) DESCOMPACTAR O ARQUIVO NA PASTA DO WEBSERVER
+2) ACESSAR A PASTA /code DO PROJETO
+3) RODAR O COMANDO:
+
+$ composer install
+
+** OBS: COMO INSTALAR O COMPOSER, CASO NECESSÁRIO: https://getcomposer.org/download/
+
+4) Criar um banco de dados, e configurar os parâmetros de conexão no arquivo
+/code/config/app.php
+nas diretrizer: Datasources > default, editando os campos host, username, password, database e port, se necessário
+ 
+5) Criar as tabelas do BD com o comando
+$ bin/cake migrations migrate
+
+6) CREDENCIAIS DE USUÁRIO PARA LOGIN NO SITE:
+email: admin@admin.com
+senha: admin

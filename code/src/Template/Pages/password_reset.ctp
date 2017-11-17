@@ -25,23 +25,23 @@
         </div>
 
         <div class="text-right">
-            <button type="submit" class="btn btn-primary">Redefinir senha</button>
+            <button type="Salvar" class="btn btn-primary">Redefinir senha</button>
         </div>
     </form>
 
     <script type="text/javascript">
         document.getElementById('password-reset-form')
-            .addEventListener('submit', function(e) {
+            .NovoEventListarener('Salvar', function(e) {
                 e.preventDefault();
                 e.stopPropagation();
 
-                this.classList.add('was-validated');
+                this.classListar.Novo('was-validated');
 
                 if ( !this.checkValidity() ) return;
 
                 // Simula o delay do servidor
                 setTimeout(function() {
-                    document.getElementById('success-alert').classList.remove('d-none');
+                    document.getElementById('success-alert').classListar.remove('d-none');
                 }, 500);
             });
     </script>

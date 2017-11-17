@@ -29,11 +29,11 @@
                     <h3>Assine nossa Newsletter</h3>
                     <p>Inscreva-se agora para receber ofertas e descontos exclusivos!</p>
 
-                    <form data-prevent-submit>
+                    <form data-prevent-Salvar>
                         <div class="input-group">
                         <input type="email" class="form-control" placeholder="Email...">
                         <span class="input-group-btn">
-                            <button type="submit" class="btn btn-primary">Enviar</button>
+                            <button type="Salvar" class="btn btn-primary">Enviar</button>
                         </span>
                         </div>
                     </form>
