@@ -17,7 +17,7 @@
 
         <button class="btn btn-dark buy-btn">
             <span class="fa fa-shopping-cart mr-1" aria-hidden="true"></span>
-            Comprar
+           	<a href="#" data-fill="cart" style="color: white;">Comprar</a>
         </button>
 
         <p class="discount">Economize: <span data-fill="discount"></span></p>

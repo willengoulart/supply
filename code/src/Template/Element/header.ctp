@@ -8,7 +8,7 @@
            	 <a href="<?= $this->Url->build(['controller'=>'users', 'action'=>'login'])?>">Entre</a> ou
            	 <a href="/pages/sign-up">Cadastre-se</a> |
             <?php }?>
-            <a href="/pages/shopping-cart">Carrinho</a> |
+            <?= $this->Html->link('Carrinho', ['controller'=>'Cart', 'action'=>'index']);?> | 
             <small>Telefone: <a href="tel:+55-11-0000-0000">(11) 0000-0000</a></small>
             <!-- <ul>
                 <li><a href="/login">Entrar</a></li>

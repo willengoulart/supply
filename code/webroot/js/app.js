@@ -67,6 +67,9 @@ var supply = (function() {
             name: function() {
                 this.href = product.url;
             },
+            cart: function() {
+                this.href = product.carturl;
+            },
             img_url: function(url) {
                 this.src = url;
                 return false;
