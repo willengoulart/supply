@@ -1,4 +1,5 @@
 <?php
+
 $this->Html->css('product-details.css', ['block' => true]);
 
 $this->Html->script('product-details.js', ['block' => true]);
