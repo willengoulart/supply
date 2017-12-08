@@ -11,7 +11,7 @@
     </ul>
 </nav>
 <div class="produtos form large-9 medium-8 columns content">
-    <?= $this->Form->create($produto) ?>
+    <?= $this->Form->create($produto, ['type' => 'file']) ?>
     <fieldset>
         <legend><?= __('Novo Produto') ?></legend>
         <?php
@@ -20,6 +20,7 @@
             echo $this->Form->control('descricao', ['class'=>'form-control']);
             echo $this->Form->control('preco', ['class'=>'form-control']);
             echo $this->Form->control('qtdEstoque', ['class'=>'form-control']);
+            echo $this->Form->control('img_arquivo', ['class'=>'form-control', 'type'=>'file', 'label'=>'Imagem']);
         ?>
     </fieldset>
     <br><?= $this->Form->button(__('Salvar'), ['class'=>'btn btn-success']) ?>

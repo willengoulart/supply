@@ -11,7 +11,7 @@ $this->Html->script('product-details.js', ['block' => true]);
     <article id="product-details" class="full-product">
         <div class="row">
             <div class="col-12 col-md-6 mb-3">
-                <img src="#" alt="" class="product-img" data-fill="img_url">
+                <img src="<?= $this->Url->build('/'.$produto->image, true)?>" alt="" class="product-img" data-fill="img_url">
             </div>
 
             <div class="col-12 col-md-6 mb-3 mt-lg-4">

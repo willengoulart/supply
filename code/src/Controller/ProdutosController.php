@@ -62,6 +62,12 @@ class ProdutosController extends AppController
         if ($this->request->is('post')) {
             $produto = $this->Produtos->patchEntity($produto, $this->request->getData());
             if ($this->Produtos->save($produto)) {
+            	if(!empty($this->request->getData('img_arquivo'))){
+            		$file = $this->request->getData('img_arquivo');
+            		move_uploaded_file ($file['tmp_name'], WWW_ROOT.'files'.DS.'produtos'.DS.$produto->id.'.png');
+            		$produto->image = WWW_ROOT.'files'.DS.'produtos'.DS.$produto->id.'.png';
+            		$this->Produtos->save($produto);
+            	}
                 $this->Flash->success(__('Produto salvo'));
 
                 return $this->redirect(['action' => 'index']);
@@ -89,6 +95,12 @@ class ProdutosController extends AppController
         if ($this->request->is(['patch', 'post', 'put'])) {
             $produto = $this->Produtos->patchEntity($produto, $this->request->getData());
             if ($this->Produtos->save($produto)) {
+            	if(!empty($this->request->getData('img_arquivo'))){
+            		$file = $this->request->getData('img_arquivo');
+            		move_uploaded_file ($file['tmp_name'], WWW_ROOT.'files'.DS.'produtos'.DS.$produto->id.'.png');
+            		$produto->image = 'files'.DS.'produtos'.DS.$produto->id.'.png';
+            		$this->Produtos->save($produto);
+            	}
                 $this->Flash->success(__('Produto salvo'));
 
                 return $this->redirect(['action' => 'index']);

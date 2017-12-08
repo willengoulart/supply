@@ -7,8 +7,8 @@ const productList = [
 	    price: <?= $item->preco?>,
 	    sale_price: false,
 	    installments: 4,
-	    img_url: 'http://via.placeholder.com/170x150?text=Produto',
-	    zoom_img_url: 'http://via.placeholder.com/900?text=Produto%20com%20zoom',
+	    img_url: '<?= $this->Url->build('/'.$item->image, true)?>',
+	    zoom_img_url: '<?= $this->Url->build('/'.$item->image, true)?>',
 	    url: '<?= $this->Url->build(['controller'=>'produtos', 'action'=>'view', $item->id]);?>'
 	  },
 	  <?php }?>

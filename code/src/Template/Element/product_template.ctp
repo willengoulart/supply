@@ -1,6 +1,6 @@
 <div data-template="product" hidden>
     <article class="item product">
-        <img src="#" alt="" class="product-img" data-fill="img_url">
+        <img src="#" alt="" class="product-img" data-fill="img_url" style="width: 170px; height: 150px;">
 
         <h3 class="product-name"><a href="#" data-fill="name">Name</a></h3>
 
