@@ -17,6 +17,7 @@
         <?php
             echo $this->Form->control('categoria_id', ['class'=>'form-control']);
             echo $this->Form->control('nome', ['class'=>'form-control']);
+            echo $this->Form->control('descricao', ['class'=>'form-control']);
             echo $this->Form->control('preco', ['class'=>'form-control']);
             echo $this->Form->control('qtdEstoque', ['class'=>'form-control']);
         ?>

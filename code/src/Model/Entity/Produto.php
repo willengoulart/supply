@@ -35,6 +35,7 @@ class Produto extends Entity
         'qtdEstoque' => true,
         'promocoes_id' => true,
         'categoria' => true,
-        'promoco' => true
+        'promoco' => true,
+    	'descricao' => true
     ];
 }
