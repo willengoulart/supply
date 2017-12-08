@@ -2,7 +2,7 @@
 <html>
   <head>
     <?= $this->Html->charset() ?>
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="Detalhesport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="format-detection" content="telephone=no">
 
     <title>Supply - Clean your Business</title>
@@ -35,6 +35,7 @@
 
         <?=
             $this->element('header').
+            $this->Flash->render().
             $this->fetch('content').
             $this->element('footer')
         ?>

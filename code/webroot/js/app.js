@@ -65,7 +65,7 @@ var supply = (function() {
         var specialCases = {
             // NOTE: Altera o link enquanto a função não dá suporte para chaves multiplas
             name: function() {
-                this.href = '/pages/product?productId=' + product.id;
+                this.href = product.url;
             },
             img_url: function(url) {
                 this.src = url;

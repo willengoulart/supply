@@ -23,7 +23,7 @@
         </div>
 
         <div class="text-center text-sm-left">
-            <button type="submit" class="btn btn-primary px-4">Entrar</button>
+            <button type="Salvar" class="btn btn-primary px-4">Entrar</button>
             <br class="d-sm-none">
             <a href="/pages/sign-up" class="btn btn-link">Não tem uma conta? Cadastre-se</a>
         </div>
@@ -31,11 +31,11 @@
 
     <script type="text/javascript">
         document.getElementById('login-form')
-            .addEventListener('submit', function(e) {
+            .NovoEventListarener('Salvar', function(e) {
                 e.preventDefault();
                 e.stopPropagation();
 
-                this.classList.add('was-validated');
+                this.classListar.Novo('was-validated');
 
                 if ( !this.checkValidity() ) return;
 
