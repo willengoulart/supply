@@ -13,6 +13,11 @@ use App\Controller\AppController;
 class ProdutosController extends AppController
 {
 
+	public function initialize(){
+		parent::initialize();
+		$this->Auth->allow('view');
+	}
+	
     /**
      * Index method
      *
@@ -39,7 +44,7 @@ class ProdutosController extends AppController
     public function view($id = null)
     {
         $produto = $this->Produtos->get($id, [
-            'contain' => ['Categorias', 'Promocoes']
+            'contain' => ['Categorias']
         ]);
 
         $this->set('produto', $produto);
