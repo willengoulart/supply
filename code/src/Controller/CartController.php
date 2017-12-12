@@ -11,6 +11,11 @@ use App\Controller\AppController;
  */
 class CartController extends AppController
 {
+	
+	public function initialize(){
+		parent::initialize();
+		$this->Auth->allow();
+	}
 
     /**
      * Index method
@@ -20,7 +25,14 @@ class CartController extends AppController
     public function index()
     {
     	$this->loadModel('Produtos');
-    	$produtos = $this->Produtos->find()->where(['id IN'=>$this->request->session()->read('Cart')]);
+    	$ids = [];
+    	if($this->request->session()->check('Cart'))
+    		$ids = $this->request->session()->read('Cart');
+    	if(!empty($ids)){
+    		$produtos = $this->Produtos->find()->where(['id IN'=>$this->request->session()->read('Cart')]);
+    	}else{
+    		$produtos = [];
+    	}
     	$this->set('produtos', $produtos);
     }
 

@@ -13,6 +13,9 @@
         </thead>
         <tbody>
         	<?php $total = 0;?>
+        	<?php if(empty($produtos)){?>
+        		
+        	<?php }else{?>
         	<?php foreach($produtos as $item){?>
             <tr>
                 <td>
@@ -26,12 +29,13 @@
             </tr>
             <?php $total+= $item->preco;?>
 			<?php } ?>
+			<?php }?>
         </tbody>
         <tfoot class="table-inverse">
             <tr>
                 <td colspan="2"></td>
                 <td>Total a comprar</td>
-                <td>R$ <?= $item->preco?>,00</td>
+                <td>R$ <?= $total?>,00</td>
                 <td></td>
             </tr>
         </tfoot>
