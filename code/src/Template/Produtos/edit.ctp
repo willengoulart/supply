@@ -26,7 +26,7 @@
             echo $this->Form->control('descricao', ['class'=>'form-control']);
             echo $this->Form->control('preco', ['class'=>'form-control']);
             echo $this->Form->control('qtdEstoque', ['class'=>'form-control']);
-            echo $this->Form->control('img_arquivo', ['class'=>'form-control', 'type'=>'file', 'label'=>'Imagem']);
+            echo $this->Form->control('img_arquivo', ['class'=>'form-control', 'type'=>'file', 'label'=>'Imagem (PNG apenas)']);
             
         ?>
     </fieldset>
